@@ -48,6 +48,7 @@ switch (n) {
 Напишите код который посчитает и выведет в консоль сумму четных чисел из интервала [a, b]
 */
 
+/*
 let a = Number(prompt("Please, enter the left border number"));
 let b = Number(prompt("Please, enter the right border number"));
 
@@ -57,3 +58,17 @@ if (i % 2 == 0) summ += i;
 };
 
 console.log("summ = ", summ);
+//alert(summ);
+*/
+
+/* 
+Задача №3 - условный оператор
+Написать код который определит наибольшее и наименьшее число из a, b, c и выведет на экран соответствующее сообщение.
+PS: попробуйте решить эту задачу одной строчки кода (сравнение и вывод)
+*/
+
+let a = Number(prompt("Please, enter the first number"));
+let b = Number(prompt("Please, enter the second number"));
+let c = Number(prompt("Please, enter the third number"));
+if((a == b) && (a == c)) console.log("The numbers are the same");
+else {console.log("Max is ", Math.max(Math.max(a, b), c), ", Min is ", Math.min(Math.min(a, b), c))};
