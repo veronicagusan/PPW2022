@@ -155,11 +155,12 @@ PS: На практике не делать такое никогда (писа�
 если его ответ Да и сообщение `Можно начать изучение прямо сейчас`, если его ответ Нет.
  */
 
-let name = prompt("Hey! What is your name?");
+/* let name = prompt("Hey! What is your name?");
 alert(`Hello, ${name}!`);
 let js = confirm("Do you know JavaScript?");
 if (js) alert("Super!");
 else alert("You can start start learning right now!");
+*/
 
 /*
 Задача №10 - условный оператор и циклы
@@ -168,3 +169,10 @@ const dividers = (number) => {
 //	your code here
 }
 */
+
+const dividers = (number) => {
+    for( let i = 1; i <= number; i++)
+    if(number % i == 0) console.log(i);
+    }
+let n = Number(prompt("Please, enter a number"));
+dividers(n);
