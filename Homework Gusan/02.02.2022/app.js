@@ -146,14 +146,19 @@ if (!((age >= 14) && (age <= 90))) alert ("Numer is in"); else alert("Number is 
 PS: На практике не делать такое никогда (писать пользователю что он ввел неверно, username или password)
 */
 
-
+let username = prompt("Please, enter your username");
+let password = prompt("Now, enter your password");
+if(!username || !password) alert("Validation error!");
+else if((username == "veronicagusan") && (password == "Qwe123!")) alert("Hy :)");
+else if(username != "veronicagusan") alert("Wrong username");
+else alert("Wrong password");
 
 /*
 Задача №9 - взаимодействие с пользователем
 Напишите код который при открытии страницы запросит у пользователя его имя(prompt). После ввода имени, 
 вывести ему сообщение `Привет ${name}`. Спросить у пользователя если он знаком с языком JavaScript(confirm) и вывести `Молодец`, 
 если его ответ Да и сообщение `Можно начать изучение прямо сейчас`, если его ответ Нет.
- */
+*/
 
 /* let name = prompt("Hey! What is your name?");
 alert(`Hello, ${name}!`);
@@ -170,9 +175,11 @@ const dividers = (number) => {
 }
 */
 
+/*
 const dividers = (number) => {
     for( let i = 1; i <= number; i++)
     if(number % i == 0) console.log(i);
     }
 let n = Number(prompt("Please, enter a number"));
 dividers(n);
+*/
