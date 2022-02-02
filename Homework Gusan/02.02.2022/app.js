@@ -67,8 +67,23 @@ console.log("summ = ", summ);
 PS: попробуйте решить эту задачу одной строчки кода (сравнение и вывод)
 */
 
+/*
 let a = Number(prompt("Please, enter the first number"));
 let b = Number(prompt("Please, enter the second number"));
 let c = Number(prompt("Please, enter the third number"));
 if((a == b) && (a == c)) console.log("The numbers are the same");
 else {console.log("Max is ", Math.max(Math.max(a, b), c), ", Min is ", Math.min(Math.min(a, b), c))};
+*/
+
+/*
+Задача №4 - функции
+Напишите функцию ucFirst(str), которая возвращает строку str с заглавным первым символом. Например:
+ucFirst("вася") == "Вася";
+*/
+
+const ucFirst = (str) => {
+    if (!str) return "Please, enter a word!";
+    else return str[0].toUpperCase() + str.slice(1);;
+}
+let word = prompt("Please, enter a word");
+console.log(ucFirst(word));
