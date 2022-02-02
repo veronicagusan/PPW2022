@@ -2,9 +2,11 @@
 Задача №1 - условный оператор
 Переменная n хранит целое число от 0 до 9. Используя оператор switch, написать скрипт, который в 
 зависимости от числа будет выводить слово (Например, если n равно 3, то будет выводиться слово «три»)
- */
+*/
 
-const n = Number(prompt("Please, enter a digit"));
+
+/*
+let n = Number(prompt("Please, enter a digit"));
 switch (n) {
     case 0:
         alert("Zero");
@@ -39,3 +41,19 @@ switch (n) {
     default:
         alert("Please, try again :(");
 }
+*/
+
+/*
+Задача №2 - циклы
+Напишите код который посчитает и выведет в консоль сумму четных чисел из интервала [a, b]
+*/
+
+let a = Number(prompt("Please, enter the left border number"));
+let b = Number(prompt("Please, enter the right border number"));
+
+let summ = 0, i;
+for (i = a; i <= b; i++) {
+if (i % 2 == 0) summ += i;
+};
+
+console.log("summ = ", summ);
