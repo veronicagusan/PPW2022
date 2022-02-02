@@ -116,8 +116,20 @@ console.log(extractCurrencyValue(word));
 Error, если введено не число
 */
 
+/*
 let a = Number(prompt("Please, enter a number"));
 if (isNaN(a)) alert("Error");
 else if (a > 0) alert(1);
 else if (a < 0) alert(-1);
 else alert(0);
+*/
+
+/*
+Задача №7 - условный оператор
+Напишите условие if для проверки, что значение переменной age НЕ находится в диапазоне 14 и 90 включительно.
+Напишите два варианта: первый с использованием оператора НЕ !, второй – без этого оператора.
+*/
+
+let age = prompt("Please, enter a number");
+if (!((age >= 14) && (age <= 90))) alert ("Numer is in"); else alert("Number is out");
+// if ((age <= 14) || (age >= 90)) alert ("Numer is out"); else alert("Number is in");
