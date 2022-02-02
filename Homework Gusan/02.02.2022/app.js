@@ -98,9 +98,26 @@ console.log(ucFirst(word));
 alert( extractCurrencyValue('$120') === 120 ); // true
 */
 
+/*
 const extractCurrencyValue = (str) => {
     if (!str) return "Please, enter a word!";
-    else return str.slice(1);;
+    else return str.slice(1);
 }
 let word = prompt("Please, enter a word");
 console.log(extractCurrencyValue(word));
+*/
+
+/*
+Задача №6 - условный оператор
+Используя конструкцию if..else, напишите код, который получает число через prompt, а затем выводит в alert:
+1, если значение больше нуля,
+-1, если значение меньше нуля,
+0, если значение равно нулю.
+Error, если введено не число
+*/
+
+let a = Number(prompt("Please, enter a number"));
+if (isNaN(a)) alert("Error");
+else if (a > 0) alert(1);
+else if (a < 0) alert(-1);
+else alert(0);
