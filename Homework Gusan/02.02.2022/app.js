@@ -81,9 +81,26 @@ else {console.log("Max is ", Math.max(Math.max(a, b), c), ", Min is ", Math.min(
 ucFirst("вася") == "Вася";
 */
 
+/*
 const ucFirst = (str) => {
     if (!str) return "Please, enter a word!";
     else return str[0].toUpperCase() + str.slice(1);;
 }
 let word = prompt("Please, enter a word");
 console.log(ucFirst(word));
+*/
+
+/*
+Задача №5 - строки
+Есть стоимость в виде строки "$120". То есть сначала идёт знак валюты, а затем – число.
+Создайте функцию extractCurrencyValue(str), которая будет из такой строки выделять числовое значение и возвращать его.
+Например:
+alert( extractCurrencyValue('$120') === 120 ); // true
+*/
+
+const extractCurrencyValue = (str) => {
+    if (!str) return "Please, enter a word!";
+    else return str.slice(1);;
+}
+let word = prompt("Please, enter a word");
+console.log(extractCurrencyValue(word));
