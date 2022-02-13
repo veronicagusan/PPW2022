@@ -194,6 +194,7 @@ console.log(convert(square, arr)); // [1, 4, 9]
 console.log(arr); // [1, 2, 3]
  */
 
+/*
 function convert(fn, array){
     let newArray = [];
     for(let i = 0; i < array.length; i++){
@@ -202,6 +203,17 @@ function convert(fn, array){
     return newArray;
 }
 function cube(x) {return x*x*x;}
-const initArray = [1,2,3,4]
+const initArray = [1, 2, 3, 4];
 console.log(convert(cube,initArray));
 console.log(initArray);
+*/
+
+/*
+Задача №6 - функции обработки массивов
+Задан массив [1, 2, 3, 4, 5, 6, 7, 8, 9].
+Используя одну функцию обработки массивов, из исходного массива нужно получить [1, 2, 3, 4, 0, 0, 0, 6, 7, 8, 9]
+ */
+
+const initArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+initArray.splice(4, 1, [0, 0, 0]);
+initArray.forEach(element => console.log(element));
