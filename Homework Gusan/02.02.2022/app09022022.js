@@ -161,6 +161,7 @@ styles.forEach(element => console.log(element));
 P.S. Ноль 0 – считается числом, не останавливайте ввод значений при вводе «0».
  */
 
+/*
 function sumInputNumbers() {
     let values = [];
     while (true) {
@@ -176,3 +177,31 @@ function sumInputNumbers() {
     return sum;
   }
   alert(sumInputNumbers());
+  */
+
+  /*
+Задача №5 - стрелочные функции обработки массивов
+Напиши функцию convert(fn, array), которая принимает на вход функцию и массив, и обрабатывает 
+каждый элемент массива этой функцией, возвращая новый массив. Пример:
+
+function square(x) { return x * x; } // возведение в квадрат
+console.log(convert(square, [1, 2, 3, 4])); // [1, 4, 9, 16]
+console.log(convert(square, [])); // []
+Обрати внимание: функция не должна изменять переданный ей массив:
+
+let arr = [1, 2, 3];
+console.log(convert(square, arr)); // [1, 4, 9]
+console.log(arr); // [1, 2, 3]
+ */
+
+function convert(fn, array){
+    let newArray = [];
+    for(let i = 0; i < array.length; i++){
+        newArray.push(cube(array[i]));
+    }
+    return newArray;
+}
+function cube(x) {return x*x*x;}
+const initArray = [1,2,3,4]
+console.log(convert(cube,initArray));
+console.log(initArray);
