@@ -134,6 +134,7 @@ let newFibonacci = fibonacciNumbers.map(element => console.log(element));
 Рэп, Регги, Классика, Рок-н-ролл
  */
 
+/* 
 const styles = ['Jazz', 'Blues'];
 styles.forEach(element => console.log(element));
 
@@ -148,3 +149,30 @@ styles.forEach(element => console.log(element));
 
 styles.unshift('Rap', 'Rugby');
 styles.forEach(element => console.log(element));
+*/
+
+/*
+Задача №4 - обработка массива
+Напишите функцию sumInputNumbers(), которая:
+
+Просит пользователя ввести значения, используя prompt и сохраняет их в массив.
+Заканчивает запрашивать значения, когда пользователь введёт не числовое значение, пустую строку или нажмёт «Отмена».
+Подсчитывает и возвращает сумму элементов массива.
+P.S. Ноль 0 – считается числом, не останавливайте ввод значений при вводе «0».
+ */
+
+function sumInputNumbers() {
+    let values = [];
+    while (true) {
+      let value = prompt("Please, enter a number", 0);
+      if (!isFinite(value) || value === "" || value === null) break;
+      values.push(+value);
+    }
+  
+    let sum = 0;
+    for (let number of values) {
+      sum += number;
+    }
+    return sum;
+  }
+  alert(sumInputNumbers());
