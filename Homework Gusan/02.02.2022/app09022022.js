@@ -61,7 +61,7 @@ let newFibonacci = fibonacciNumbers.map(element => console.log(element));
 5. выводит тех учеников чья средняя оценка больше средней оценки всего класса
  */
 
-const students = [
+/*const students = [
     {
         name: "Veronica",
         marks: [8, 9, 9, 10, 8]
@@ -102,7 +102,7 @@ const students = [
         name: "Cristian",
         marks: [7, 5, 4, 7, 7]
     }
-];
+];*/
 
 //Error!!
 //sum = students[0].marks.reduce((sum, number) => sum + number, 0);
@@ -114,3 +114,37 @@ const students = [
 //console.log(averrage);
 
 //const average = arr => arr.reduce(sum = numbers.reduce((sum, number) => sum + number) / arr.length);
+
+/*
+Задача №3 - обработка массива
+Создать массив и произвести над ним следующие 5 операций:
+
+Создайте массив styles с элементами «Джаз» и «Блюз».
+Добавьте «Рок-н-ролл» в конец.
+Замените значение в середине на «Классика». Ваш код для поиска значения в середине должен работать для массивов с любой длиной.
+Удалите первый элемент массива и покажите его.
+Вставьте «Рэп» и «Регги» в начало массива.
+
+Массив по ходу выполнения операций:
+
+Джаз, Блюз
+Джаз, Блюз, Рок-н-ролл
+Джаз, Классика, Рок-н-ролл
+Классика, Рок-н-ролл
+Рэп, Регги, Классика, Рок-н-ролл
+ */
+
+const styles = ['Jazz', 'Blues'];
+styles.forEach(element => console.log(element));
+
+styles.push('Rock and Roll');
+styles.forEach(element => console.log(element));
+
+styles.splice(styles.length/2, 1, 'Classic');
+styles.forEach(element => console.log(element));
+
+styles.shift();
+styles.forEach(element => console.log(element));
+
+styles.unshift('Rap', 'Rugby');
+styles.forEach(element => console.log(element));
