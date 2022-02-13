@@ -161,8 +161,8 @@ styles.forEach(element => console.log(element));
 P.S. Ноль 0 – считается числом, не останавливайте ввод значений при вводе «0».
  */
 
-/*
-function sumInputNumbers() {
+
+/*const sumInputNumbers = () => {
     let values = [];
     while (true) {
       let value = prompt("Please, enter a number", 0);
@@ -176,8 +176,8 @@ function sumInputNumbers() {
     }
     return sum;
   }
-  alert(sumInputNumbers());
-  */
+  console.log("Summ is: ", sumInputNumbers());
+*/
 
   /*
 Задача №5 - стрелочные функции обработки массивов
@@ -195,14 +195,14 @@ console.log(arr); // [1, 2, 3]
  */
 
 /*
-function convert(fn, array){
+const convert = (fn, array) => {
     let newArray = [];
     for(let i = 0; i < array.length; i++){
         newArray.push(cube(array[i]));
     }
     return newArray;
 }
-function cube(x) {return x*x*x;}
+const cube = (x) => {return x*x*x;}
 const initArray = [1, 2, 3, 4];
 console.log(convert(cube,initArray));
 console.log(initArray);
@@ -214,6 +214,15 @@ console.log(initArray);
 Используя одну функцию обработки массивов, из исходного массива нужно получить [1, 2, 3, 4, 0, 0, 0, 6, 7, 8, 9]
  */
 
+/*
 const initArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 initArray.splice(4, 1, [0, 0, 0]);
 initArray.forEach(element => console.log(element));
+*/
+
+/*
+Задача №7 - функции обработки массивов
+Задан массив [1, 2, 3, 4, 5, 6, 7, 8, 9]. Написать функцию которая возвращает элементы этого массива, начиная с позиции start по позиции end.
+
+extract(2, 4) вернет [3, 4, 5]
+ */
