@@ -229,6 +229,34 @@ initArray.forEach(element => console.log(element));
 extract(2, 4) вернет [3, 4, 5]
  */
 
+/*
 const initArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const extract = initArray.slice(2, 4);
 extract.forEach(element => console.log(element));
+*/
+
+/*
+Задача №8 - функции обработки массивов
+Задан массив
+const colors = [“red”, “green”, “blue”];
+Написать функцию
+checkColor(color)
+которая вернет позицию цвета в массиве если она есть или -1 если цвета нет. 
+*/
+
+const colors = ["red", "green", "blue"];
+const checkColor = colors.findIndex(element => element == "bluee");
+console.log(checkColor);
+/*
+Задача №9 - функции обработки массивов
+Задан массив [1, “a”, 2, null, 3, undefined, 4, {}, 5, 6, `word`, 7, 8, false, 9, 100]
+Напишите функцию filter которая удалить лишнее из массива (все что не является цифрой) и вернет чистый массив [1, 2,  3, 4, 5, 6, 7, 8, 9]
+*/
+
+
+/*
+Задача №10 - функции обработки массивов
+Задан массив [8, 7,  2,  2,  3, 4, 2,  5, 5, 6, 7, 8, 5, 9, 0, 1]
+Напишите функцию uniqueSorted, которая удалит дубликаты из массива и вернет отсортированный по возрастанию массив из уникальных значений
+[0, 1, 2,  3, 4, 5, 6, 7, 8, 9]
+ */
