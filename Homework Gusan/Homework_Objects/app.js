@@ -181,6 +181,7 @@ address: `Moldova`
 Создайте по одной функции get для каждого поля объекта (функции/методы должныдолны принадлежать объекту)
 */
 
+/*
 let person = {
 	name: `Person`,
 	age: 123,
@@ -216,6 +217,7 @@ let person = {
 	}
 };
 console.log(person.gName, person.gAge, person.gSalary, person.gPhone, person.gEmail, person.gAddress);
+*/
 
 /*
 Задача №8 - работа с ключами объекта
@@ -243,7 +245,31 @@ const weekDays = {
 }
 Примечание: нельзя делать так weekDays[“mon”] = “Luni”
 Используйте методы для работы с объектами или массивами.
+*/
 
+const weekDays = {
+	"Mo": "Понедельник",
+	"Tu": "Вторник",
+	"We": "Среда",
+	"Th": "Четверг",
+	"Fr": "Пятница",
+	"Sa": "Суббота",
+	"Su": "Воскресенье",
+}
+
+let romTranslate = ["Luni", "Marti", "Miercuri", "Joi", "Vineri", "Simbata", "Duminica"];
+let translate = (obj, translate) => {
+	let keys =  Object.keys(obj);
+
+	for (let key in keys) {
+		obj[keys[key]] = translate[key];
+	}
+};
+
+translate(weekDays, romTranslate);
+console.log(weekDays);
+
+/*
 Задача №9 - работа с ключами объекта
 Задан объект
 const weekDays = {
