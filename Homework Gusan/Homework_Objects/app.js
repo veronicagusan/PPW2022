@@ -32,6 +32,7 @@ let salaries = {
 Если объект salaries пуст, то результат должен быть 0.
 */
 
+/*
 let salaries = {
 	John: 100,
 	Ann: 160,
@@ -42,8 +43,8 @@ let sum = 0;
 for (let key in salaries) {
   sum += salaries[key];
 }
-
 console.log(sum);
+*/
 
 /*
 Задача №3 - методы объекта
@@ -69,6 +70,25 @@ menu = {
 Обратите внимание, что multiplyNumeric не нужно ничего возвращать. Следует напрямую изменять объект.
 
 P.S. Используйте typeof для проверки, что значение свойства числовое.
+*/
+
+let menu = {
+	width: 200,
+	height: 300,
+	title: "My menu"
+  };
+
+function multiplyNumeric(obj) {
+	for (let key in obj) {
+	  if (typeof obj[key] == 'number') {
+		obj[key] *= 2;
+	  }
+	}
+  };
+  multiplyNumeric(menu);
+  console.log(menu);
+  
+/*
 Задача №4 - обработка объектов
 Создайте объект user1 со следующей структурой:
 {
