@@ -154,6 +154,7 @@ console.log(obj);
 [{1, 2}, {3, 4}]
 */
 
+/*
 const obj = [{x: 1, y: 2}, {x: 3, y: 4}, {x: null, y: 4}, {x: 3, y: undefined}];
 
 const del = (obj) => {
@@ -161,6 +162,7 @@ const del = (obj) => {
 }
 
 console.log(del(obj));
+*/
 
 /*
 Задача №7 - getters
@@ -177,7 +179,45 @@ address: `Moldova`
 }
 
 Создайте по одной функции get для каждого поля объекта (функции/методы должныдолны принадлежать объекту)
+*/
 
+let person = {
+	name: `Person`,
+	age: 123,
+	salary: 1542.33,
+	contacts: {
+		phone: `112`,
+		email: `email @domain.com`
+	},
+	address: `Moldova`,
+
+	get gName() {
+		return this.name;
+	},
+
+	get gAge() {
+		return this.age;
+	},
+
+	get gSalary() {
+		return this.salary;
+	},
+
+	get gPhone() {
+		return this.contacts.phone;
+	},
+
+	get gEmail() {
+		return this.contacts.email;
+	},
+
+	get gAddress() {
+		return this.address;
+	}
+};
+console.log(person.gName, person.gAge, person.gSalary, person.gPhone, person.gEmail, person.gAddress);
+
+/*
 Задача №8 - работа с ключами объекта
 Задан объект 
 const weekDays = {
