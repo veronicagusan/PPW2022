@@ -244,15 +244,22 @@ checkColor(color)
 которая вернет позицию цвета в массиве если она есть или -1 если цвета нет. 
 */
 
+/*
 const colors = ["red", "green", "blue"];
 const checkColor = colors.findIndex(element => element == "bluee");
 console.log(checkColor);
+*/
+
 /*
 Задача №9 - функции обработки массивов
 Задан массив [1, “a”, 2, null, 3, undefined, 4, {}, 5, 6, `word`, 7, 8, false, 9, 100]
 Напишите функцию filter которая удалить лишнее из массива (все что не является цифрой) и вернет чистый массив [1, 2,  3, 4, 5, 6, 7, 8, 9]
 */
-
+const all = [1, "a", 2, null, 3, undefined, 4, {}, 5, 6, `word`, 7, 8, false, 9, 100];
+const newArray = all.filter((element) => {
+    return typeof element === 'number';
+});
+console.log(newArray);
 
 /*
 Задача №10 - функции обработки массивов
