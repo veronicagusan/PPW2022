@@ -131,6 +131,7 @@ address: `Moldova`
 Замените в этом объекте номер телефона на `+37312345678` и удалите поле address. Выведите объект в консоль.
 */
 
+/*
 let obj = {
 	name: `Person`,
 	age: 123,
@@ -144,13 +145,24 @@ let obj = {
 obj.contacts.phone = `+37312345678`;
 delete obj.address;
 console.log(obj);
+*/
 
 /*
 Задача №6 - массив объектов
 Задан массив из точек [{1, 2}, {3, 4}, {null, 4}, {3, undefined}]
 Написать функцию которая удалит из массива все неправильно заданные точки и вернет массив из точек у которых координаты указаны правильно.
 [{1, 2}, {3, 4}]
+*/
 
+const obj = [{x: 1, y: 2}, {x: 3, y: 4}, {x: null, y: 4}, {x: 3, y: undefined}];
+
+const del = (obj) => {
+    return obj.filter((element, index) => typeof (obj[index].x) === 'number' && typeof (obj[index].y) === 'number');
+}
+
+console.log(del(obj));
+
+/*
 Задача №7 - getters
 Создайте объект person со следующей структурой:
 {
