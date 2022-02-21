@@ -103,6 +103,7 @@ function multiplyNumeric(obj) {
 PS: Если у вас выведется 2 раза одинаковые значения, значит задача выполнена неправильно.
 */
 
+/*
 let user1 = {
 	name: `User 1`,
 	age: 123
@@ -111,6 +112,7 @@ let user2 = Object.assign({}, user1);
 user2.name =`User 2`;
 user2.age = 321;
 console.log(user1, user2);
+*/
 
 /*
 Задача №5 - обработка объектов
@@ -127,8 +129,23 @@ address: `Moldova`
 }
 
 Замените в этом объекте номер телефона на `+37312345678` и удалите поле address. Выведите объект в консоль.
+*/
 
+let obj = {
+	name: `Person`,
+	age: 123,
+	salary: 1542.33,
+	contacts: {
+		phone: `112`,
+		email: `email @domain.com`
+	},
+	address: `Moldova`
+};
+obj.contacts.phone = `+37312345678`;
+delete obj.address;
+console.log(obj);
 
+/*
 Задача №6 - массив объектов
 Задан массив из точек [{1, 2}, {3, 4}, {null, 4}, {3, undefined}]
 Написать функцию которая удалит из массива все неправильно заданные точки и вернет массив из точек у которых координаты указаны правильно.
