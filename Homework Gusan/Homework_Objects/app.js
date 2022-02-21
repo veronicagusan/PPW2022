@@ -247,6 +247,7 @@ const weekDays = {
 Используйте методы для работы с объектами или массивами.
 */
 
+/*
 const weekDays = {
 	"Mo": "Понедельник",
 	"Tu": "Вторник",
@@ -268,6 +269,7 @@ let translate = (obj, translate) => {
 
 translate(weekDays, romTranslate);
 console.log(weekDays);
+*/
 
 /*
 Задача №9 - работа с ключами объекта
@@ -292,7 +294,24 @@ const weekDays = {
 	“Su”: “Duminica”
 }
 Придумайте подходящее название для этой функции.
+*/
 
+const weekDays = {
+	"Luni": "Mo",
+	"Marti": "Tu",
+	"Miercuri": "We",
+	"Joi": "Th",
+	"Vineri": "Fr",
+	"Simbata": "Sa",
+	"Duminica": "Su"
+}
+
+const reverse = (obj) => {
+    return Object.fromEntries(Object.entries(obj).map(([key,value])=>[value,key]));
+}
+console.log(reverse(weekDays));
+
+/*
 Задача №10 - работа с ключами объекта
 
 Создайте 2 объект person со следующей структурой:
