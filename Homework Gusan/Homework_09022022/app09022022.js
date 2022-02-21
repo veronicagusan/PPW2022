@@ -255,11 +255,14 @@ console.log(checkColor);
 Задан массив [1, “a”, 2, null, 3, undefined, 4, {}, 5, 6, `word`, 7, 8, false, 9, 100]
 Напишите функцию filter которая удалить лишнее из массива (все что не является цифрой) и вернет чистый массив [1, 2,  3, 4, 5, 6, 7, 8, 9]
 */
+
+/* 
 const all = [1, "a", 2, null, 3, undefined, 4, {}, 5, 6, `word`, 7, 8, false, 9, 100];
 const newArray = all.filter((element) => {
     return typeof element === 'number';
 });
 console.log(newArray);
+*/
 
 /*
 Задача №10 - функции обработки массивов
@@ -267,3 +270,7 @@ console.log(newArray);
 Напишите функцию uniqueSorted, которая удалит дубликаты из массива и вернет отсортированный по возрастанию массив из уникальных значений
 [0, 1, 2,  3, 4, 5, 6, 7, 8, 9]
  */
+
+let array = [8, 7, 2, 2, 3, 4, 2, 5, 5, 6, 7, 8, 5, 9, 0, 1];
+const uniqueSorted = (elemet) => [...new Set(elemet)].sort((a, b) => a - b);
+console.log(uniqueSorted(array));
