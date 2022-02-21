@@ -72,6 +72,7 @@ menu = {
 P.S. Используйте typeof для проверки, что значение свойства числовое.
 */
 
+/*
 let menu = {
 	width: 200,
 	height: 300,
@@ -87,7 +88,8 @@ function multiplyNumeric(obj) {
   };
   multiplyNumeric(menu);
   console.log(menu);
-  
+  */
+
 /*
 Задача №4 - обработка объектов
 Создайте объект user1 со следующей структурой:
@@ -99,7 +101,18 @@ function multiplyNumeric(obj) {
 Замените в user 2 значения name = `User 2` и age = 321.
 Выведите в консоль оба объекта. 
 PS: Если у вас выведется 2 раза одинаковые значения, значит задача выполнена неправильно.
+*/
 
+let user1 = {
+	name: `User 1`,
+	age: 123
+}
+let user2 = Object.assign({}, user1);
+user2.name =`User 2`;
+user2.age = 321;
+console.log(user1, user2);
+
+/*
 Задача №5 - обработка объектов
 Создайте объект person со следующей структурой:
 {
