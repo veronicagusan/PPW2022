@@ -296,6 +296,7 @@ const weekDays = {
 Придумайте подходящее название для этой функции.
 */
 
+/*
 const weekDays = {
 	"Luni": "Mo",
 	"Marti": "Tu",
@@ -310,6 +311,7 @@ const reverse = (obj) => {
     return Object.fromEntries(Object.entries(obj).map(([key,value])=>[value,key]));
 }
 console.log(reverse(weekDays));
+*/
 
 /*
 Задача №10 - работа с ключами объекта
@@ -326,6 +328,41 @@ console.log(reverse(weekDays));
 address: `Moldova`
 }
 
-Напишите метод Intersection который получит на входе эти 2 объекта и вернет новый объект только из тех полей значение которых равна о обоих объектов.
-
+Напишите метод Intersection который получит на входе эти 2 объекта и вернет новый объект только из тех полей значение
+которых равна о обоих объектов.
 */
+
+let person1 = {
+	name: `Person 1`,
+	age: 67,
+	salary: 1542.33,
+	contacts: {
+		phone: `112`,
+		email: `email1@domain.com`
+	},
+	address: `Moldova`
+};
+
+let person2 = {
+	name: `Person 2`,
+	age: 67,
+	salary: 1542.33,
+	contacts: {
+		phone: `114`,
+		email: `email2@domain.com`
+	},
+	address: `Moldova`
+};
+
+const intersection = (obj1, obj2) => {
+    const result = {};
+
+    for (const key of Object.keys(obj1)) {
+        if (obj1[key] === obj2[key]) {
+            result[key] = obj1[key];
+        }
+    }
+    return result;
+}
+
+console.log(intersection(person1, person2));
