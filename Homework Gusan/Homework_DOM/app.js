@@ -71,8 +71,8 @@ addElement();
 /*
 Задача №6 - добавление элементов в DOM
 Добавить в страницу таблицу 8*8. При помощи JS кода закрасить цвет фона чтобы получилась шахматная доска.
-Использовать querySelector*
 */
+
 
 function drawBoard() {
     let board = document.querySelector(".board");
